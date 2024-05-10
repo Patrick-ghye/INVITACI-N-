@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>¿Le gustaría acompañarme a un quince?</h2>
+    <button onclick="respuesta('sí')">Sí</button>
+    <button onclick="respuesta('no')">No</button>
+  </div>
+
+  <script>
+    let respuestas = [
+      "¡Estaré encantado de acompañarte!",
+      "¡Qué alegría! Será un día genial juntos.",
+      "¡Muchas gracias por aceptar! Será inolvidable.",
+      "¡Increíble! No puedo esperar a compartir este momento contigo.",
+      "¡Qué emoción! Será un quince fantástico.",
+      "¡Maravilloso! Gracias por hacerme tan feliz.",
+      "¡Qué increíble noticia! Muchas gracias por decir que sí.",
+      "¡Wow! No puedo esperar a pasar este día especial contigo.",
+      "¡Mil gracias por aceptar! Será un quince mágico.",
+      "¡Genial! ¡Nos espera una noche espectacular!",
+      "¡Qué honor! Muchas gracias por aceptar mi invitación.",
+      "¡Increíble! ¡Estoy muy emocionado de ir contigo!",
+      "¡Qué ilusión! Será una noche maravillosa juntos.",
+      "¡Qué alegría! ¡Nos espera una noche increíble!",
+      "¡Muchísimas gracias por decir que sí! Será un quince único."
+    ];
+
+    function respuesta(respuestaUsuario) {
+      if (respuestaUsuario === 'sí') {
+        alert('¡Genial! Nos vemos en el quince.');
+      } else {
+        let respuestaAleatoria = respuestas[Math.floor(Math.random() * respuestas.length)];
+        alert(respuestaAleatoria);
+        document.querySelector('button:nth-child(1)').innerText = "Sí";
+      }
+    }
+  </script>
+</body>
+</html>
